@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv sync)",
+      "Bash(uv run pytest:*)",
+      "Bash(uv run ruff:*)"
+    ],
+    "deny": [
+      "Edit(/python-refresher/**)",
+      "Edit(/algorithms/**)"
+    ]
+  }
+}
