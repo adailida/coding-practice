@@ -29,19 +29,20 @@ def last_worth_funding(mv: Callable[[int], float], t: float, cap: int) -> int | 
     return _last_worth_funding(mv, t, (0, cap))
 
 
-def _last_worth_funding(mv: Callable[[int], float], t: float, cap: tuple[int, int]) -> int | None:
-    cap_from, cap_to = cap
-    if cap_to - cap_from < 0:
+def _last_worth_funding(
+    mv: Callable[[int], float], t: float, bounds: tuple[int, int]
+) -> int | None:
+    bounds_from, bounds_to = bounds
+    if bounds_to - bounds_from < 0:
         return None
 
-    x = cap_from + (cap_to - cap_from) // 2
+    x = bounds_from + (bounds_to - bounds_from) // 2
     val: float = mv(x)
-    # print(f"{x=} {val=}")
 
     if val < t:
-        return _last_worth_funding(mv, t, (cap_from, x - 1))
+        return _last_worth_funding(mv, t, (bounds_from, x - 1))
     else:
-        return _last_worth_funding(mv, t, (x + 1, cap_to)) or x
+        return _last_worth_funding(mv, t, (x + 1, bounds_to)) or x
 
 
 def mv(x: int) -> float:
