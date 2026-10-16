@@ -6,7 +6,6 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
   },
-  "python.analysis.autoImportCompletions": true,
   "basedpyright.analysis.typeCheckingMode": "standard"
   // "editor.inlineSuggest.enabled": false,
   // "chat.disableAIFeatures": true,
