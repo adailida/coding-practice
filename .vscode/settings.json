@@ -6,14 +6,7 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
   },
-  "basedpyright.analysis.typeCheckingMode": "standard"
-  // "editor.inlineSuggest.enabled": false,
-  // "chat.disableAIFeatures": true,
-  // "editor.quickSuggestions": {
-  //   "other": "off",
-  //   "comments": "off",
-  //   "strings": "off"
-  // },
-  // "editor.suggestOnTriggerCharacters": false,
-  // "editor.parameterHints.enabled": false
+  "basedpyright.analysis.typeCheckingMode": "standard",
+  "rewrap.wrappingColumn": 100,
+  "editor.rulers": [100],  
 }
