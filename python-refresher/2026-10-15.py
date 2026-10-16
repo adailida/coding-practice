@@ -10,7 +10,7 @@ def top_k(words: list[str], k: int) -> list[tuple[str, int]]:
     return Counter(words).most_common(k)
 
 
-assert top_k("a b a c a b".split(), 2) == [("a", 3), ("b", 2)]
+assert top_k("a b a c a b".split(), 2) == [("a", 3), ("b", 2)]  # pyright: ignore[reportArgumentType]
 
 
 # 2. Group words by their length. Use defaultdict(list).
