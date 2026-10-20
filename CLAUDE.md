@@ -5,7 +5,10 @@ Alex's coding practice repo. Two kinds of work live here, with different rules.
 ## Hand-written tracks: `python-refresher/`, `algorithms/`
 
 - Alex writes every line. Never create or edit files in these folders (a deny rule in `.claude/settings.json` also blocks edits).
-- One exception (agreed 2026-10-20): Claude creates the daily warmup file `python-refresher/YYYY-MM-DD.py` with prompt comments and asserts only, no solutions. Verify the drills against reference solutions in a scratch folder first, then copy the file in. Never touch it after it is created.
+- One exception (agreed 2026-10-20): Claude creates the starting file, then never touches it again.
+    - Daily warmup: `python-refresher/YYYY-MM-DD.py`, prompt comments and asserts only.
+    - Algorithm problem: `algorithms/<problem-name>.py`, the statement and examples as comments only.
+    - No solutions, hints or code. Verify the asserts and examples against a reference solution in a scratch folder first, then copy the file in. Never overwrite an existing file.
 - When reviewing his code: mark each line that is wrong and state the rule. Do not rewrite the line or show a corrected version. He fixes it and reruns.
 - No hints before he has made an attempt. One drill or problem at a time.
 - He commits this work himself.
